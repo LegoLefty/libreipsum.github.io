@@ -1,0 +1,15 @@
+---
+layout: layouts/base.html
+title: "Articles"
+description: "This page lists all of my blog articles"
+tags: ["top"]
+---
+
+<h1>Articles</h1>
+These are all currently ai generated placeholders because I care more about designing a cool website than the content.
+
+<ul id="articles-list">
+{% for page in collections.articles %}
+<li class="article-list-item"><a class="Article-link" href="{{page.url}}">{{page.data.title}}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include "basehead.html" %}
+	{% block head %}{% endblock %}
+	
+</head>
+<body class="dark-theme">
+	<header>
+		<a href="/">LibreIpsum</a>
+		{% block header %}{% endblock %}
+		<nav>{% include "nav.njk" %}</nav>
+		<script>document.write('<button id="darkmodetoggle">toggle dark mode</button>')</script>
+	</header>
+	<main>
+		{{content | safe}}
+	</main>
+	<script src="/js/darkmode.js"></script>
+</body>
+</html>
